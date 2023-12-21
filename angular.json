@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "netflix-clone:build:production"
+              "buildTarget": "netflix-clone:build:production"
             },
             "development": {
-              "browserTarget": "netflix-clone:build:development"
+              "buildTarget": "netflix-clone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "netflix-clone:build"
+            "buildTarget": "netflix-clone:build"
           }
         },
         "test": {
