@@ -1,11 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth/auth.service';
+import { CommonModule } from '@angular/common';
+import { AuthService } from '../../shared/services/auth.service';
+import { HeaderComponent } from 'src/app/core/components/header/header.component';
+import { BannerComponent } from 'src/app/core/components/banner/banner.component';
 
 @Component({
   selector: 'app-browse',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, HeaderComponent, BannerComponent],
   templateUrl: './browse.component.html',
   styleUrl: './browse.component.css',
 })

@@ -1,16 +1,17 @@
 declare var google: any;
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
 export class LoginComponent implements OnInit {
-  private router = inject(Router)
+  private router = inject(Router);
   ngOnInit(): void {
     google.accounts.id.initialize({
       client_id:
@@ -27,17 +28,17 @@ export class LoginComponent implements OnInit {
       width: 350,
     });
   }
-  private decodeToken(token:string){
+  private decodeToken(token: string) {
     return JSON.parse(atob(token.split('.')[1]));
   }
   handleLogin(response: any) {
     if (response) {
       //decode the token
-    const payload =  this.decodeToken(response.credential);
+      const payload = this.decodeToken(response.credential);
       //save in Session storage
-    sessionStorage.setItem("loggedInUser",JSON.stringify(payload));
+      sessionStorage.setItem('loggedInUser', JSON.stringify(payload));
       //navigate to browse page
-      this.router.navigate(['browse'])
+      this.router.navigate(['browse']);
     }
   }
 }
