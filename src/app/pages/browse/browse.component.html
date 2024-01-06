@@ -1,7 +1,8 @@
 <app-header [userImg]="picture" />
-<!-- <app-banner [bannerTitle]="(bannerDetail$ | async)?.original_title" /> -->
+
 <app-banner [bannerTitle]="(bannerDetail$ | async)?.original_title"
   [bannerOverview]="(bannerDetail$ | async)?.overview" />
+
 <app-movie-carousel [title]="'Popular on Netflix'" [videoContents]="movies" />
 
 <app-movie-carousel [title]="'Trending TV shows'" [videoContents]="tvShows" />

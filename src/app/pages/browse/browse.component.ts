@@ -89,16 +89,12 @@ export class BrowseComponent implements OnInit {
         this.topRatedMovies = res.topRated.results as IVideoContent[];
         this.getMovieKey();
       });
-    console.log('this.nowPlayingMovies', this.nowPlayingMovies);
   }
   getMovieKey() {
-    this.movieService.getBannerDetail(this.movies[0].id).subscribe((res) => {
-      console.log('abdul', res);
-      // this.bannerDetail$
+    this.movieService.getBannerVideo(this.movies[1].id).subscribe((res) => {
+      // console.log('abdul', res);
     });
-    this.movieService.getNowPlayingMovies().subscribe((res: any) => {
-      console.log('test', res);
-    });
+    this.movieService.getNowPlayingMovies().subscribe((res: any) => {});
   }
   logout() {
     sessionStorage.removeItem('loggedInUser');
