@@ -8,11 +8,11 @@ const options = {
     page: '1',
     sort_by: 'popularity.desc',
   },
-  // headers: {
-  //   accept: 'application/json',
-  //   Authorization:
-  //     'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZGEyNjVhMTExMjQ2MThkOWRjYTUzNTQ4OTkwMWM2MiIsInN1YiI6IjY1OGVhNmU4MGU1YWJhNzFlNDg2MWMwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gaf-E88WiWKO2GyEx40b4WnpOnZpT_caDC1UTyNv0jQ',
-  // },
+  headers: {
+    accept: 'application/json',
+    Authorization:
+      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZGEyNjVhMTExMjQ2MThkOWRjYTUzNTQ4OTkwMWM2MiIsInN1YiI6IjY1OGVhNmU4MGU1YWJhNzFlNDg2MWMwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gaf-E88WiWKO2GyEx40b4WnpOnZpT_caDC1UTyNv0jQ',
+  },
 };
 @Injectable({
   providedIn: 'root',
