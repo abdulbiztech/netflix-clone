@@ -15,8 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     google.accounts.id.initialize({
       client_id:
-        '',
-      callback: (resp: any) => {
+      '31681522671-bdkoj23v46gfpt12qjoedaq895ikjbp5.apps.googleusercontent.com',      callback: (resp: any) => {
         console.log(resp);
         this.handleLogin(resp);
       },
@@ -35,9 +34,7 @@ export class LoginComponent implements OnInit {
     if (response) {
       //decode the token
       const payload = this.decodeToken(response.credential);
-      //save in Session storage
       sessionStorage.setItem('loggedInUser', JSON.stringify(payload));
-      //navigate to browse page
       this.router.navigate(['browse']);
     }
   }
