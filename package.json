@@ -19,6 +19,9 @@
     "@angular/platform-browser-dynamic": "^17.0.7",
     "@angular/router": "^17.0.7",
     "bootstrap": "^5.3.2",
+    "postcss-import": "^16.0.0",
+    "postcss-loader": "^7.3.4",
+    "postcss-nested": "^6.0.1",
     "rxjs": "~7.8.0",
     "swiper": "^11.0.5",
     "tslib": "^2.3.0",
@@ -37,7 +40,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
+    "postcss-nesting": "^12.0.2",
+    "tailwindcss": "^3.4.1",
     "typescript": "~5.2.2"
   }
 }
